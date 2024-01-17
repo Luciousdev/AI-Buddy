@@ -1,0 +1,9 @@
+gtts
+playsound
+soundfile
+torchaudio
+pygobject
+numpy
+scipy
+librosa
+fairseq
