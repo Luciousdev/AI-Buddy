@@ -14,6 +14,7 @@
 | Windows | ✅       |
 | MacOS   | ❔       |
 | Android | 🚧      |
+------------
 ✅ = Currently Supported<br>
 🚧 = Working on support/still being tested<br>
 ❔ = Not able to test support<br>
