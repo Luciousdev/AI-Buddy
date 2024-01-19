@@ -1,9 +1,6 @@
-gtts
-playsound
-soundfile
-torchaudio
-pygobject
-numpy
-scipy
-librosa
-fairseq
+setuptools>=68.2.2
+wheel>=0.38.4
+tts==0.22.0
+playsound>=1.3.0
+loguru>=0.7.2
+python-dotenv

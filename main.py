@@ -1,14 +1,16 @@
-import os
-from gtts import gTTS
-from playsound import playsound
+import src.tests.test_init as test_init
 
 if __name__ == '__main__':
-    answer = "test"
+    print("Would you like to test all modules? (y/n)")
+    if input().lower() == "y":
+        test_init.tts()
+        exit()
+
+
+    answer = "This is an amazing test message"
 
     """ 
-    Start voice pipeline
+    Generate TTS
     """
-    from src.client_pipeline import tts_pipeline
-    vocal_pipeline = tts_pipeline()
-    vocal_pipeline.tts(answer, save_path=f'./audio_cache/dialog_cache.wav', voice_conversion=True)
-    print("test")
+    from src.modules.tts.tts_init import text_to_speech
+    text_to_speech(answer)
