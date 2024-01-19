@@ -7,7 +7,11 @@ def text_to_speech(input_text):
     import os
     load_dotenv()
     use_gpu = os.environ["use_gpu"]
-    print(use_gpu)
+    if use_gpu == "False":
+        use_gpu = False
+    else:
+        use_gpu = True
+
     """
         Generate TTS
     """
