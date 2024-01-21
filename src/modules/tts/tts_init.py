@@ -2,7 +2,6 @@ from dotenv import load_dotenv
 from TTS.api import TTS
 
 
-
 def text_to_speech(input_text):
     import os
     load_dotenv()
