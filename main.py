@@ -1,9 +1,10 @@
-import src.tests.test_init as test_init
-
 if __name__ == '__main__':
     print("Would you like to test all modules? (y/n)")
+
     if input().lower() == "y":
+        import src.tests.test_init as test_init
         test_init.tts()
+
         exit()
 
 
