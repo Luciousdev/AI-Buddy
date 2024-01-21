@@ -2,9 +2,12 @@ from twitchio.ext import commands
 from dotenv import load_dotenv
 import os
 
-load_dotenv()  # Load environment variables from .env file
-TWITCH_TOKEN = os.getenv('TWITCH_TOKEN')  # Get Twitch token from environment variables
-TWITCH_CHANNEL = os.getenv('TWITCH_CHANNEL')  # Get Twitch channel from environment variables
+# Init dotenv
+load_dotenv()
+
+# Load dotenv variables
+TWITCH_TOKEN = os.getenv('TWITCH_TOKEN')
+TWITCH_CHANNEL = os.getenv('TWITCH_CHANNEL')
 
 class Bot(commands.Bot):
     def __init__(self):
@@ -19,7 +22,7 @@ class Bot(commands.Bot):
 
     async def event_message(self, message):
         # Log the message content
-        print(f'[{message.author.name}] {message.content}')
+        print(f'[{message.author.name}] said {message.content}')
 
         # Process the message further if needed
         await self.handle_commands(message)
