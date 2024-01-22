@@ -12,7 +12,7 @@ TWITCH_CHANNEL = os.getenv('TWITCH_CHANNEL')
 class Bot(commands.Bot):
     def __init__(self):
         super().__init__(
-            token=TWITCH_TOKEN, 
+            token=TWITCH_TOKEN,
             prefix='!',  
             initial_channels=[TWITCH_CHANNEL]
         )

@@ -24,8 +24,11 @@ def text_to_speech(input_text):
         Process the audio file
     """
     # Play the audio file
-    from playsound import playsound
-    playsound("audio_dirs/output.wav")
-    # Remove the audio file
-    import os
-    os.remove("audio_dirs/output.wav")
+    import soundfile as sf
+    import sounddevice as sd
+    audio_file_dir = "audio_dirs/output.wav"
+    data, fs = sf.read(audio_file_dir, dtype='float32')
+    sd.play(data, fs)
+    status = sd.wait()
+
+    os.remove(audio_file_dir)
